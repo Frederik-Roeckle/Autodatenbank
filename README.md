@@ -1,2 +1,2 @@
-# Autodatenbank
-Schulprojekt Autodatenbank
+# Autodatenbank API
+Backend für Schulprojekt Autodatenbank
