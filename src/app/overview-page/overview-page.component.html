@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <title>Die Autodatenbank deines Vertrauens</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <style>
+      .jumbotron {
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div
+      class="jumbotron bg-secondary text-white text-center sticky-top"
+      style="margin: bottom 0"
+    >
+      <h1>
+        AUDA<br />
+        Die Autodatenbank deines Vertrauens
+      </h1>
+      <p>Finde spannende Daten über fast jedes Auto</p>
+    </div>
+    <div class="container" style="margin-top: 30px">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="container">
+            <h2>Eigenschaften:</h2>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Marke</th>
+                  <th scope="col">Modell</th>
+                  <th scope="col">ID</th>
+                  <th scope="col">Details</th>
+                  <th scope="col">Löschen</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let car of AllCars">
+                  <td>{{ car.marke }}</td>
+                  <td>{{ car.modell }}</td>
+                  <td>{{ car._id }}</td>
+                  <td>
+                    <button
+                      type="button"
+                      class="btn btn-primary"
+                      [routerLink]="['/DetailViewPage', car._id]"
+                    >
+                      Details
+                    </button>
+                  </td>
+                  <td>
+                    <button type="button" class="btn btn-danger">
+                      Löschen
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="jumbotron bg-secondary text-white text-center"
+      style="margin-bottom: 0"
+    >
+      <p>Developed by Freddi, Jannik, Luisa, Philipp</p>
+    </div>
+  </body>
+</html>
