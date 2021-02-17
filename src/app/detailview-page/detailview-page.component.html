@@ -38,7 +38,20 @@
     </div>
 
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top rounded">
-      <a class="navbar-brand" href="#">🚗 {{ car.marke }} {{ car.modell }}</a>
+      <a class="navbar-brand">
+        <button
+          type="button"
+          [routerLink]="['/OverviewPage']"
+          class="btn"
+          data-toggle="tooltip"
+          data-placement="top"
+          title="Zurück zur Startseite"
+        >
+          🚗
+        </button>
+
+        {{ car.marke }} {{ car.modell }}</a
+      >
       <button
         class="navbar-toggler"
         type="button"

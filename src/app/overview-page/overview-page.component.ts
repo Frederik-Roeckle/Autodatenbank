@@ -15,4 +15,9 @@ export class OverviewPageComponent implements OnInit {
   async ngOnInit() {
     this.AllCars = await this.carDbApiService.getAllCars();
   }
+
+  async deleteCar(carId: string) {
+    console.log("Delete Car");
+    await this.carDbApiService.deleteCar(carId);
+  }
 }

@@ -61,7 +61,11 @@
                     </button>
                   </td>
                   <td>
-                    <button type="button" class="btn btn-danger">
+                    <button
+                      (click)="deleteCar(car._id)"
+                      type="button"
+                      class="btn btn-danger"
+                    >
                       Löschen
                     </button>
                   </td>

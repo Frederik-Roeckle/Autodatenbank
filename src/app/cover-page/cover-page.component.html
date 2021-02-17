@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="de">
   <head>
-    <title>Die Autodatenbank deines Vertrauens</title>
+    <title>AUDA</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
@@ -18,14 +18,15 @@
         padding-bottom: 10px;
       }
 
-      button:hover {
+      body {
+        text-align: center;
+      }
+
+      .btn-secondary:hover {
         background: url("https://media.giphy.com/media/u5bbqJE63sBGM/giphy.gif");
         background-position: center;
         background-size: cover;
-      }
-
-      body {
-        text-align: center;
+        color: transparent;
       }
     </style>
   </head>
@@ -47,21 +48,22 @@
         <br />
         <h2>Wenn Autos Dein Ding sind, bist Du hier genau richtig.</h2>
         <br />
-
-        Wir haben für dich eine Datenbank entwickelt,
-        <p></p>
-        in der du sämtliche Daten von den unterschiedlichsten Autos finden
-        kannst.
-        <p></p>
-        Egal welche Daten dich interessieren, ob Kraftstoffverbrauch, PS-Zahl
-        oder
-        <p></p>
-        die Maximalgeschwindigkeit eines Fahrzeugs - hier wirst du fündig!
-        <br />
-
+        <p>
+          Wir haben für dich eine Datenbank entwickelt,
+          <br />
+          in der du sämtliche Daten von den unterschiedlichsten Autos finden
+          kannst.
+          <br />
+          Egal welche Daten dich interessieren, ob Kraftstoffverbrauch, PS-Zahl
+          oder
+          <br />
+          die Maximalgeschwindigkeit eines Fahrzeugs - hier wirst du fündig!
+          <br />
+        </p>
         <br />
         <h3>
           Um jetzt loszulegen, drück den "Start"-Button:
+          <br />
           <br />
         </h3>
         <button
@@ -72,14 +74,17 @@
           Los Gehts !
         </button>
         <br />
+        <br />
       </div>
     </div>
 
     <div
-      class="jumbotron bg-secondary text-white text-center"
-      style="margin-bottom: 0"
+      class="jumbotron bg-secondary text-white text-right"
+      style="margin: bottom 0px"
     >
-      <p>Developed by Freddi, Jannik, Luisa, Philipp</p>
+      <button type="button" class="btn btn-primary btn-sm">
+        Datenbank initialisieren
+      </button>
     </div>
   </body>
 </html>
