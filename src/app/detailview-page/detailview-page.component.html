@@ -8,6 +8,13 @@
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+      integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+      crossorigin="anonymous"
+    />
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -63,18 +70,21 @@
       <div class="collapse navbar-collapse" id="collapsibleNavbar">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <button onclick="" type="button" class="btn btn-danger navbar-btn">
-              Delete
+            <button
+              (click)="deleteThisCar()"
+              type="button"
+              class="btn btn-danger navbar-btn"
+            >
+              <i class="fas fa-trash-alt"></i>
             </button>
           </li>
           <li class="nav-item">
-            <button onclick="" type="button" class="btn btn-primary navbar-btn">
-              Edit
-            </button>
-          </li>
-          <li class="nav-item">
-            <button onclick="" type="button" class="btn btn-success navbar-btn">
-              Create New
+            <button
+              (click)="editThisCar()"
+              type="button"
+              class="btn btn-primary navbar-btn"
+            >
+              <i class="fas fa-edit"></i>
             </button>
           </li>
         </ul>
@@ -99,12 +109,11 @@
                   <td>
                     <div class="form-outline mb-3" style="width: 15rem">
                       <input
+                        id="marke"
                         class="form-control"
-                        id="formControlDisabled"
                         type="text"
-                        placeholder="{{ car.marke }}"
+                        value="{{ car.marke }}"
                         aria-label="disabled input example"
-                        disabled
                       />
                     </div>
                   </td>
@@ -115,9 +124,9 @@
                     <div class="form-outline mb-3" style="width: 15rem">
                       <input
                         class="form-control"
-                        id="formControlDisabled"
+                        id="modell"
                         type="text"
-                        placeholder="{{ car.modell }}"
+                        value="{{ car.modell }}"
                         aria-label="disabled input example"
                         disabled
                       />
@@ -130,9 +139,9 @@
                     <div class="form-outline mb-3" style="width: 15rem">
                       <input
                         class="form-control"
-                        id="formControlDisabled"
+                        id="beschleunigung"
                         type="text"
-                        placeholder="{{ car.beschleunigung }}"
+                        value="{{ car.beschleunigung }}"
                         aria-label="disabled input example"
                         disabled
                       />
@@ -145,9 +154,9 @@
                     <div class="form-outline mb-3" style="width: 15rem">
                       <input
                         class="form-control"
-                        id="formControlDisabled"
+                        id="breite"
                         type="text"
-                        placeholder="{{ car.breite }}"
+                        value="{{ car.breite }}"
                         aria-label="disabled input example"
                         disabled
                       />
@@ -160,9 +169,9 @@
                     <div class="form-outline mb-3" style="width: 15rem">
                       <input
                         class="form-control"
-                        id="formControlDisabled"
+                        id="co2AusstossNEFZ"
                         type="text"
-                        placeholder="{{ car.co2AusstossNEFZ }}"
+                        value="{{ car.co2AusstossNEFZ }}"
                         aria-label="disabled input example"
                         disabled
                       />
@@ -175,9 +184,9 @@
                     <div class="form-outline mb-3" style="width: 15rem">
                       <input
                         class="form-control"
-                        id="formControlDisabled"
+                        id="grundpreis"
                         type="text"
-                        placeholder="{{ car.grundpreis }}"
+                        value="{{ car.grundpreis }}"
                         aria-label="disabled input example"
                         disabled
                       />
@@ -190,9 +199,9 @@
                     <div class="form-outline mb-3" style="width: 15rem">
                       <input
                         class="form-control"
-                        id="formControlDisabled"
+                        id="hubraum"
                         type="text"
-                        placeholder="{{ car.hubraum }}"
+                        value="{{ car.hubraum }}"
                         aria-label="disabled input example"
                         disabled
                       />
@@ -205,9 +214,9 @@
                     <div class="form-outline mb-3" style="width: 15rem">
                       <input
                         class="form-control"
-                        id="formControlDisabled"
+                        id="maxGeschwindigkeit"
                         type="text"
-                        placeholder="{{ car.maxGeschwindigkeit }}"
+                        value="{{ car.maxGeschwindigkeit }}"
                         aria-label="disabled input example"
                         disabled
                       />
@@ -220,9 +229,9 @@
                     <div class="form-outline mb-3" style="width: 15rem">
                       <input
                         class="form-control"
-                        id="formControlDisabled"
+                        id="hoehe"
                         type="text"
-                        placeholder="{{ car.hoehe }}"
+                        value="{{ car.hoehe }}"
                         aria-label="disabled input example"
                         disabled
                       />
@@ -235,9 +244,9 @@
                     <div class="form-outline mb-3" style="width: 15rem">
                       <input
                         class="form-control"
-                        id="formControlDisabled"
+                        id="leistungPS"
                         type="text"
-                        placeholder="{{ car.leistungPS }}"
+                        value="{{ car.leistungPS }}"
                         aria-label="disabled input example"
                         disabled
                       />
@@ -250,9 +259,9 @@
                     <div class="form-outline mb-3" style="width: 15rem">
                       <input
                         class="form-control"
-                        id="formControlDisabled"
+                        id="motorArt"
                         type="text"
-                        placeholder="{{ car.motorArt }}"
+                        value="{{ car.motorArt }}"
                         aria-label="disabled input example"
                         disabled
                       />
@@ -265,9 +274,9 @@
                     <div class="form-outline mb-3" style="width: 15rem">
                       <input
                         class="form-control"
-                        id="formControlDisabled"
+                        id="schadStoffKlasse"
                         type="text"
-                        placeholder="{{ car.schadStoffKlasse }}"
+                        value="{{ car.schadStoffKlasse }}"
                         aria-label="disabled input example"
                         disabled
                       />
@@ -280,9 +289,9 @@
                     <div class="form-outline mb-3" style="width: 15rem">
                       <input
                         class="form-control"
-                        id="formControlDisabled"
+                        id="sitzAnzahl"
                         type="text"
-                        placeholder="{{ car.sitzAnzahl }}"
+                        value="{{ car.sitzAnzahl }}"
                         aria-label="disabled input example"
                         disabled
                       />
@@ -296,9 +305,9 @@
                     <div class="form-outline mb-3" style="width: 15rem">
                       <input
                         class="form-control"
-                        id="formControlDisabled"
+                        id="zulGesamtGewicht"
                         type="text"
-                        placeholder="{{ car.zulGesamtGewicht }}"
+                        value="{{ car.zulGesamtGewicht }}"
                         aria-label="disabled input example"
                         disabled
                       />
@@ -311,9 +320,9 @@
                     <div class="form-outline mb-3" style="width: 15rem">
                       <input
                         class="form-control"
-                        id="formControlDisabled"
+                        id="verbrauchGesamtNEFZ"
                         type="text"
-                        placeholder="{{ car.verbrauchGesamtNEFZ }}"
+                        value="{{ car.verbrauchGesamtNEFZ }}"
                         aria-label="disabled input example"
                         disabled
                       />
@@ -326,9 +335,9 @@
                     <div class="form-outline mb-3" style="width: 15rem">
                       <input
                         class="form-control"
-                        id="formControlDisabled"
+                        id="verbrauchInnerortsNEFZ"
                         type="text"
-                        placeholder="{{ car.verbrauchInnerortsNEFZ }}"
+                        value="{{ car.verbrauchInnerortsNEFZ }}"
                         aria-label="disabled input example"
                         disabled
                       />
@@ -341,9 +350,9 @@
                     <div class="form-outline mb-3" style="width: 15rem">
                       <input
                         class="form-control"
-                        id="formControlDisabled"
+                        id="verbrauchAusserortsNEFZ"
                         type="text"
-                        placeholder="{{ car.verbrauchAusserortsNEFZ }}"
+                        value="{{ car.verbrauchAusserortsNEFZ }}"
                         aria-label="disabled input example"
                         disabled
                       />
@@ -356,9 +365,9 @@
                     <div class="form-outline mb-3" style="width: 15rem">
                       <input
                         class="form-control"
-                        id="formControlDisabled"
+                        id="wltpSehrSchnell"
                         type="text"
-                        placeholder="{{ car.wltpSehrSchnell }}"
+                        value="{{ car.wltpSehrSchnell }}"
                         aria-label="disabled input example"
                         disabled
                       />
@@ -371,9 +380,9 @@
                     <div class="form-outline mb-3" style="width: 15rem">
                       <input
                         class="form-control"
-                        id="formControlDisabled"
+                        id="wltpSchnell"
                         type="text"
-                        placeholder="{{ car.wltpSchnell }}"
+                        value="{{ car.wltpSchnell }}"
                         aria-label="disabled input example"
                         disabled
                       />
@@ -386,9 +395,9 @@
                     <div class="form-outline mb-3" style="width: 15rem">
                       <input
                         class="form-control"
-                        id="formControlDisabled"
+                        id="wltpLangsam"
                         type="text"
-                        placeholder="{{ car.wltpLangsam }}"
+                        value="{{ car.wltpLangsam }}"
                         aria-label="disabled input example"
                         disabled
                       />
@@ -401,9 +410,9 @@
                     <div class="form-outline mb-3" style="width: 15rem">
                       <input
                         class="form-control"
-                        id="formControlDisabled"
+                        id="wltpKombiniert"
                         type="text"
-                        placeholder="{{ car.wltpKombiniert }}"
+                        value="{{ car.wltpKombiniert }}"
                         aria-label="disabled input example"
                         disabled
                       />
@@ -416,9 +425,9 @@
                     <div class="form-outline mb-3" style="width: 15rem">
                       <input
                         class="form-control"
-                        id="formControlDisabled"
+                        id="hsn"
                         type="text"
-                        placeholder="{{ car.hsn }}"
+                        value="{{ car.hsn }}"
                         aria-label="disabled input example"
                         disabled
                       />
@@ -431,9 +440,9 @@
                     <div class="form-outline mb-3" style="width: 15rem">
                       <input
                         class="form-control"
-                        id="formControlDisabled"
+                        id="tsn"
                         type="text"
-                        placeholder="{{ car.hsn }}"
+                        value="{{ car.hsn }}"
                         aria-label="disabled input example"
                         disabled
                       />
@@ -446,9 +455,9 @@
                     <div class="form-outline mb-3" style="width: 15rem">
                       <input
                         class="form-control"
-                        id="formControlDisabled"
+                        id="erstZulassung"
                         type="text"
-                        placeholder="{{ car.erstZulassung }}"
+                        value="{{ car.erstZulassung }}"
                         aria-label="disabled input example"
                         disabled
                       />
@@ -461,9 +470,9 @@
                     <div class="form-outline mb-3" style="width: 15rem">
                       <input
                         class="form-control"
-                        id="formControlDisabled"
+                        id="fahrzeugKlasse"
                         type="text"
-                        placeholder="{{ car.fahrzeugKlasse }}"
+                        value="{{ car.fahrzeugKlasse }}"
                         aria-label="disabled input example"
                         disabled
                       />
@@ -476,9 +485,9 @@
                     <div class="form-outline mb-3" style="width: 15rem">
                       <input
                         class="form-control"
-                        id="formControlDisabled"
+                        id="aufbauArt"
                         type="text"
-                        placeholder="{{ car.aufbauArt }}"
+                        value="{{ car.aufbauArt }}"
                         aria-label="disabled input example"
                         disabled
                       />
@@ -491,9 +500,9 @@
                     <div class="form-outline mb-3" style="width: 15rem">
                       <input
                         class="form-control"
-                        id="formControlDisabled"
+                        id="bezeichnungFahrzeugKlasseAufbau"
                         type="text"
-                        placeholder="{{ car.bezeichnungFahrzeugKlasseAufbau }}"
+                        value="{{ car.bezeichnungFahrzeugKlasseAufbau }}"
                         aria-label="disabled input example"
                         disabled
                       />

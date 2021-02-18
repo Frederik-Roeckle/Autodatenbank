@@ -12,7 +12,6 @@ interface Car {
   motorArt: string;
   schadStoffKlasse: string;
   sitzAnzahl: number;
-  verbrauch?: number;
   zulGesamtGewicht: number;
   verbrauchGesamtNEFZ: number;
   verbrauchInnerortsNEFZ: number;

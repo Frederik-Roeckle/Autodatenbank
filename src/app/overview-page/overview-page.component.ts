@@ -13,11 +13,16 @@ export class OverviewPageComponent implements OnInit {
   public Car: Object = [];
 
   async ngOnInit() {
+    this.getAllCars();
+  }
+
+  async getAllCars() {
     this.AllCars = await this.carDbApiService.getAllCars();
   }
 
   async deleteCar(carId: string) {
     console.log("Delete Car");
     await this.carDbApiService.deleteCar(carId);
+    this.getAllCars();
   }
 }
