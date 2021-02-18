@@ -43,7 +43,12 @@
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top rounded">
       <div class="input-group">
         <button class="btn btn-secondary" type="button">Suchen</button>
-        <input type="text" class="form-control" />
+        <input
+          id="searchBox"
+          type="text"
+          (input)="filterCarList()"
+          class="form-control"
+        />
         <button class="btn btn-success"><i class="fas fa-plus"></i></button>
       </div>
     </nav>
@@ -64,7 +69,7 @@
                 </tr>
               </thead>
               <tbody>
-                <tr *ngFor="let car of AllCars">
+                <tr *ngFor="let car of DisplayedCars">
                   <td>{{ car.marke }}</td>
                   <td>{{ car.modell }}</td>
                   <td>{{ car._id }}</td>

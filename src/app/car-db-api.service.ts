@@ -6,6 +6,19 @@ import { Injectable } from "@angular/core";
 export class CarDbApiService {
   constructor() {}
 
+  async initDB() {
+    try {
+      const fetchReturn = await fetch("http://localhost:3000/init").then(
+        (response) => {
+          return response.json();
+        }
+      );
+      return fetchReturn;
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
   async getAllCars() {
     try {
       const fetchReturn = await fetch("http://localhost:3000/cars").then(
