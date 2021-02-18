@@ -1,0 +1,41 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Datenbank">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Auto" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="beschleunigung"/>
+              <xs:element type="xs:short" name="breite"/>
+              <xs:element type="xs:short" name="co2AusstossNEFZ"/>
+              <xs:element type="xs:string" name="grundpreis"/>
+              <xs:element type="xs:short" name="hubraum"/>
+              <xs:element type="xs:string" name="maxGeschwindigkeit"/>
+              <xs:element type="xs:short" name="hoehe"/>
+              <xs:element type="xs:short" name="leistungPS"/>
+              <xs:element type="xs:string" name="marke"/>
+              <xs:element type="xs:string" name="modell"/>
+              <xs:element type="xs:string" name="motorArt"/>
+              <xs:element type="xs:string" name="schadStoffKlasse"/>
+              <xs:element type="xs:byte" name="sitzAnzahl"/>
+              <xs:element type="xs:string" name="verbrauchGesamtNEFZ"/>
+              <xs:element type="xs:byte" name="verbrauchInnerortsNEFZ"/>
+              <xs:element type="xs:byte" name="verbrauchAusserortsNEFZ"/>
+              <xs:element type="xs:short" name="zulGesamtGewicht"/>
+              <xs:element type="xs:byte" name="wltpSehrSchnell"/>
+              <xs:element type="xs:byte" name="wltpSchnell"/>
+              <xs:element type="xs:byte" name="wltpLangsam"/>
+              <xs:element type="xs:byte" name="wltpKombiniert"/>
+              <xs:element type="xs:string" name="hsn"/>
+              <xs:element type="xs:string" name="tsn"/>
+              <xs:element type="xs:string" name="erstZulassung"/>
+              <xs:element type="xs:string" name="fahrzeugKlasse"/>
+              <xs:element type="xs:string" name="aufbauArt"/>
+              <xs:element type="xs:string" name="bezeichnungFahrzeugKlasseAufbau"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
